@@ -1,0 +1,46 @@
+<!-- <p>< % = brand%></p> -->
+    <div class="products-catalogue ms-3 mb-5 container">
+        <div class="filter-left">
+          <div class="midsizeplus" style="padding: 20px 20px">FILTERS</div>
+          <div class="filters">
+            <div class="filter-categories">
+              <p style="color: red;">Brands</p>
+                <% brands.forEach((item=>{%>
+                    <%if(item!=undefined){%>
+                    <input
+                    type="checkbox"
+                    id="<%= item %>"
+                    value="<%= item %>"
+                    onclick="filter('brand','<%= item %>')"
+                  />
+                  <label for="<%= item %>"><%=item%></label><br />
+                    <%}%>
+                    <%}))%>
+            </div>
+
+
+<hr>
+
+            <div class="filter-categories">
+              <p style="color:red">Price</p>
+              <input
+                type="checkbox"
+                id="below1000"
+                value="below1000"
+                onclick="filter('price', 'below1000')"
+              />
+              <label>Below 1000</label><br />
+              
+              <input
+              type="checkbox"
+              id="above1000"
+              value="above1000"
+              onclick="filter('price','above1000')"
+              />
+              <label>Above 1000</label><br />
+             
+              
+            </div>
+</div>
+</div>
+</div>
